@@ -2108,9 +2108,15 @@ img, svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    font-size: 0.7rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ba-arrow-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--color-accent);
+    display: block;
+    pointer-events: none;
 }
 
 /* Badges overlay */
