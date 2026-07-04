@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: ./
+  DEPLOYMENT_FOLDER: ./dist
 
 jobs:
 # Please do not rename this job
@@ -26,6 +26,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: 'recursive'
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: run build
+        run: npm run build
 
 # Please do not touch the following action
       - name: Store deployment content
