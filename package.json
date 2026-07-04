@@ -1,0 +1,13 @@
+{
+  "name": "primus-gebaeudeservice-website",
+  "version": "1.0.0",
+  "description": "Premium Website für PRIMUS Gebäudeservice (Berlin/Brandenburg)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}
