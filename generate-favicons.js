@@ -19,6 +19,16 @@ async function generate() {
     const size = Math.min(width, height);
     image.crop((width - size) / 2, (height - size) / 2, size, size);
 
+    console.log('Making background transparent...');
+    image.scan(0, 0, image.bitmap.width, image.bitmap.height, function(x, y, idx) {
+        const r = this.bitmap.data[idx + 0];
+        const g = this.bitmap.data[idx + 1];
+        const b = this.bitmap.data[idx + 2];
+        if (r > 245 && g > 245 && b > 245) {
+            this.bitmap.data[idx + 3] = 0; // Transparent
+        }
+    });
+
     const sizes = {
         'favicon-16.png': 16,
         'favicon-32.png': 32,
