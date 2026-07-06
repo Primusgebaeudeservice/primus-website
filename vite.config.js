@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         impressum: 'impressum.html',
+        agb: 'agb.html',
         datenschutz: 'datenschutz.html'
       }
     }
